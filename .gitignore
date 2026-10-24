@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+data/
+*.log
+启动日志.txt
+.DS_Store
+.idea/
+.vscode/
+.venv/
+venv/
+.workbuddy/

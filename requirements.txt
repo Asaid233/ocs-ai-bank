@@ -1,0 +1,4 @@
+# 本项目只使用 Python 标准库，不需要安装任何第三方依赖。
+# 启动方式：
+#   Windows: 双击「启动.bat」
+#   命令行:  python app.py
