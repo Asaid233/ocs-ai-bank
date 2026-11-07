@@ -92,6 +92,8 @@ export DEEPSEEK_API_KEY=sk-xxxx     # macOS / Linux
 
 > 使用油猴脚本版 OCS 时，如果请求被拦截，需要在脚本头部加 `@connect 127.0.0.1`，或使用官方的「全域名通用版」。Chrome 插件版一般可直接访问 localhost。
 
+> **Tampermonkey 油猴脚本版**：把配置里的 `"type": "fetch"` 改成 `"type": "GM_xmlhttpRequest"`，保存后**刷新课程页面**。OCS 5.x 修改题库配置后不会热更新，当前页面会一直用旧配置并提示「搜索不到答案」。
+
 ## 关闭服务
 
 - **Windows**：双击 `停止.bat`，会自动找到并结束监听 8787 的进程

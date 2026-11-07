@@ -1297,6 +1297,10 @@
               <pre class="code" id="guide-code">${esc(ocsConfigText())}</pre>
               <button class="btn ghost sm copy-btn" id="copy-guide-config">${icons.copy}<span>复制</span></button>
             </div>
+            <div class="callout" style="margin-top:12px">
+              ${icons.info}
+              <div><strong>如果你用的是 Tampermonkey 油猴脚本版：</strong>把配置里的 <span class="inline-code">"type": "fetch"</span> 改成 <span class="inline-code">"GM_xmlhttpRequest"</span>。这样能绕开 https 课程页请求 http://127.0.0.1 时的 CSP/跨域限制；Chrome 插件版保持 <span class="inline-code">fetch</span> 即可。</div>
+            </div>
           </div>
         </div>
 
@@ -1305,6 +1309,7 @@
           <div class="step-body">
             <h3>在 OCS 中粘贴并测试</h3>
             <p>打开 OCS 网课助手 → 「通用」→「全局设置」→「题库配置」，把上面的 JSON 粘贴进去并保存（<strong>替换掉原来的言溪配置</strong>）。随便答一道题，观察是否出现「本地题库（言溪 + DeepSeek）」的答案。</p>
+            <p><strong>修改题库配置后必须刷新课程页面（F5）</strong>，否则当前页面的 OCS 仍在用旧配置，会一直提示「搜索不到答案」。刷新后再点重新运行。</p>
             <p>之后每答一道题：<strong>本地题库 → 言溪题库 → DeepSeek</strong>。言溪命中后直接缓存到本地，下次连言溪也不用再查；两边都没有才调用 AI。刷得越多，命中率越高，费用越少。</p>
           </div>
         </div>
